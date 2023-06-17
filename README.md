@@ -69,5 +69,4 @@ This project is licensed under the MIT License.
 Acknowledgments
 
 The MERN stack community for their excellent libraries and frameworks.
-The developers of Grammarly for their spell check and grammar suggestions service.
-Font Awesome for the iconography used in the app.
+
