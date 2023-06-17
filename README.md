@@ -63,8 +63,7 @@ Create a new branch for your feature or bug fix.
 Make the necessary changes and commit them.
 Push your changes to your forked repository.
 Submit a pull request detailing the changes you made.
-License
-This project is licensed under the MIT License.
+
 
 Acknowledgments
 
