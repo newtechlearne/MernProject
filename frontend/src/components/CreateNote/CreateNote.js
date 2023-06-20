@@ -1,4 +1,9 @@
 import axios from "axios";
+<<<<<<< HEAD
+=======
+import React, { useState } from "react";
+import axios from "axios";
+>>>>>>> 24f6b515a3620a4a58a646cf2c6d833024a5b210
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router";
 import "./CreateNote.css";
@@ -31,6 +36,7 @@ const CreateNote = () => {
             });
     };
 
+<<<<<<< HEAD
     const [timer, setTimer] = useState(1500); // Initial timer value of 1500 seconds (25 minutes)
     const [isActive, setIsActive] = useState(false);
 
@@ -66,6 +72,8 @@ const CreateNote = () => {
         setIsActive(false);
     };
 
+=======
+>>>>>>> 24f6b515a3620a4a58a646cf2c6d833024a5b210
     useEffect(() => {
         const charval = document.getElementById("textarea");
         let totalCount = document.getElementById("total-counter");
@@ -79,6 +87,7 @@ const CreateNote = () => {
             remainingCount.innerText = 150 - userChar;
         };
 
+<<<<<<< HEAD
         charval.addEventListener("input", updateCounter);
 
         return () => {
@@ -182,6 +191,45 @@ const CreateNote = () => {
         div > <
         /div> < /
         div >
+=======
+        charval.addEventListener("keyup", updateCounter);
+
+        const copyText = () => {
+            charval.select();
+            charval.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(charval.value);
+        };
+
+        return () => {
+            charval.removeEventListener("keyup", updateCounter);
+        };
+    }, []);
+
+    return (
+        <div className="CreateForm">
+            <div className="FormContent">
+                <form onSubmit={handleSubmit}>
+                    <div className="NoteForm">
+                        <h3 className="TextHead">Note</h3>
+                        <textarea
+                            id="textarea" // added id for reference in JavaScript code
+                            className="NoteText"
+                            required
+                            value={content}
+                            onChange={(e) => setContent(e.target.value)}
+                        />
+                    </div>
+                    <div>
+                        <span id="total-counter"></span> characters
+                        remaining: <span id="remaining-counter"></span>
+                    </div>
+                    <button className="CreateNoteBtn" onClick={handleSubmit}>
+                        Create Note
+                    </button>
+                </form>
+            </div>
+        </div>
+>>>>>>> 24f6b515a3620a4a58a646cf2c6d833024a5b210
     );
 };
 
